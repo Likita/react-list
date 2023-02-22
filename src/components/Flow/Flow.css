@@ -1,0 +1,13 @@
+.link {
+  color: #61dafb;
+}
+
+.link:active,
+.link:hover {
+  color: #20d28b;
+}
+
+.flow dd {
+  margin: 0;
+  color: #c2c4c3;
+}

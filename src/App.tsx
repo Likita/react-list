@@ -13,7 +13,6 @@ function App() {
 
   useEffect(() => {
     axios.get(apiLink).then((response: FlowListResponse) => {
-      console.log(response)
       let sourceName = '';
       let destinationName = '';
       let destinationYear = '';

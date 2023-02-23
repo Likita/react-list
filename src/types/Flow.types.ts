@@ -9,14 +9,8 @@ export interface DisplayFlow {
 export interface Flow {
   id: string,
   amountUSD: string,
-  sourceObjects: {
-    type: string,
-    name: string,
-  }[],
-  destinationObjects: {
-    type: string,
-    name: string,
-  }[],
+  sourceObjects: SourceObject[],
+  destinationObjects: SourceObject[],
 }
 
 export interface FlowListResponse {
@@ -27,6 +21,14 @@ export interface FlowListResponse {
   }
 }
 
-export const DetailMode = "Detail";
-export const TypeOrganization = "Organization";
-export const TypeYear = "UsageYear";
+export interface SourceObject {
+  type: SourceObjectType,
+  name: string,
+}
+
+export enum SourceObjectType {
+  Organization ='Organization',
+  UsageYear = 'UsageYear'
+}
+
+export const DetailMode = 'Detail';

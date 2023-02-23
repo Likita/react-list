@@ -8,9 +8,7 @@ interface IFlow {
   mode?: string
 }
 
-const Flow: FC<IFlow> = (props: any) => {
-  const { flow, mode } = props;
-
+const Flow: FC<IFlow> = ({ flow, mode }) => {
   return (
     <div className="flow">
       <div>

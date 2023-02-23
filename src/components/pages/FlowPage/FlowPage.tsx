@@ -7,8 +7,7 @@ interface IFlow {
   flows: DisplayFlow[];
 }
 
-const FlowPage:FC<IFlow> = (props: any) => {
-  const { flows } = props;
+const FlowPage:FC<IFlow> = ({ flows }) => {
   const {flowId} = useParams();
   const flow = flows.find((item:DisplayFlow) => item.id === flowId);
 

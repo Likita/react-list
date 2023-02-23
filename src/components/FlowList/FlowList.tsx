@@ -10,7 +10,7 @@ interface IFlowList {
 const FlowList:FC<IFlowList> = ({flows}) => {
   return (
     <ul className="list">
-      {flows.map((item: any) => {
+      {flows.map((item: DisplayFlow) => {
         return (<li key={item.id} className="list-item">
           <Flow flow={item}></Flow>
         </li>
